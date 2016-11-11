@@ -1,0 +1,10 @@
+#!/bin/bash
+
+python3.5 tests.py 2>/dev/null
+
+if [[ $? != 0 ]] ;
+then
+    echo 'Вы не можете совершить commit: в тестах есть ошибки!'
+    echo 'Исправьте ошибки и повторите commit'
+    exit 1
+fi
